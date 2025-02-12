@@ -23,8 +23,17 @@ import { MdOutlineMail } from "react-icons/md";
 import { LuMessageSquareMore } from "react-icons/lu";
 import { IoMdCall } from "react-icons/io";
 import LeadDetail from "./LeadDetail";
-
+import { toggleNotes, toggleCall, toggleEmail, toggleSms } from "../Store/VisibilitySlice";
+import { useDispatch,useSelector } from "react-redux";
 const Company = () => {
+
+    const dispatch = useDispatch();
+    const showNotes = useSelector((state) => state.visibility.showNotes);
+    const showEmail = useSelector((state) => state.visibility.showEmail);
+    const showCall = useSelector((state) => state.visibility.showCall);
+    const showSms = useSelector((state) => state.visibility.showSms);
+  
+
   const [companyName, setCompanyName] = useState("Abha Empire Pvt.");
   const [editing, setEditing] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -118,16 +127,16 @@ const Company = () => {
 
         {/* Buttons */}
         <Box sx={{ display: "flex", gap: 2 }}>
-          <button style={buttonStyle}>
+          <button style={buttonStyle} onClick={() => dispatch(toggleNotes())}>
             <MdOutlineSpeakerNotes size={18} /> Notes
           </button>
-          <button style={buttonStyle}>
+          <button style={buttonStyle} onClick={() => dispatch(toggleEmail())}>
             <MdOutlineMail size={18} /> Email
           </button>
-          <button style={buttonStyle}>
+          <button style={buttonStyle} onClick={() => dispatch(toggleSms())}>
             <LuMessageSquareMore size={18} /> SMS
           </button>
-          <button style={buttonStyle}>
+          <button style={buttonStyle} onClick={() => dispatch(toggleCall())}>
             <IoMdCall size={18} /> Call
           </button>
         </Box>

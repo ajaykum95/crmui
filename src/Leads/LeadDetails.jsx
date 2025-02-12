@@ -23,15 +23,8 @@ import ContactBox from "../Component/ContactBox";
 import Sms from "../Component/Sms";
 import EmailBox from "../Component/EmailBox";
 import NotesBox from "../Component/NotesBox";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleNotes, toggleCall, toggleEmail, toggleSms } from "../Store/VisibilitySlice";
 
 const LeadDetails = () => {
-  const dispatch = useDispatch();
-  const showNotes = useSelector((state) => state.visibility.showNotes);
-  const showEmail = useSelector((state) => state.visibility.showEmail);
-  const showCall = useSelector((state) => state.visibility.showCall);
-  const showSms = useSelector((state) => state.visibility.showSms);
 
   const buttonStyle = {
     display: "flex",

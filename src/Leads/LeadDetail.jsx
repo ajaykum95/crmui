@@ -24,7 +24,18 @@ import StatusChanged from "../Thread/StatusChanged";
 import SMSCard from "../Thread/SMSCard";
 import CallLog from "../Thread/CallLog";
 import CallBox from "../Thread/CallBox";
+import NoteBox from "../Thread/NoteBox";
+import EmailBox from "../Thread/EmailBox";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleNotes, toggleCall, toggleEmail, toggleSms } from "../Store/VisibilitySlice";
+
 const LeadDetail = () => {
+    const dispatch = useDispatch();
+    const showNotes = useSelector((state) => state.visibility.showNotes);
+    const showEmail = useSelector((state) => state.visibility.showEmail);
+    const showCall = useSelector((state) => state.visibility.showCall);
+    const showSms = useSelector((state) => state.visibility.showSms);
+  
   const [selectedLeftTab, setSelectedLeftTab] = useState(0);
   const [selectedRightTab, setSelectedRightTab] = useState(0);
 
@@ -173,8 +184,18 @@ const LeadDetail = () => {
                   <CallLog />
                 </Box>
                 <Box>
-                  <CallBox/>
+                 {showNotes && <NoteBox/>}
                 </Box>
+                <Box>
+                 {showEmail && <EmailBox/>}
+                </Box>
+                <Box>
+                  {showCall && <CallBox/>}
+                </Box>
+                <Box>
+                  {showSms && <NoteBox />} {/* Show NotesBox */}
+                </Box>
+
               </div>
             )}
             {selectedRightTab === 1 && (
