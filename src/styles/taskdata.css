@@ -1,0 +1,91 @@
+/* taskdata.css */
+
+/* Container styles for TaskData */
+.task-container {
+    max-width: 400px;
+    margin-top: -20px;
+    padding: 16px; /* Replace with your spacing unit if needed */
+  }
+  
+  /* Task Item Styles */
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-unit);
+    margin-bottom: 8px; /* Space between tasks */
+    background-color: var(--secondary-color); /* Adjust color if necessary */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-item:hover {
+    background-color: var(--hover-bg-color); /* Add hover effect */
+  }
+  
+  .task-text {
+    flex: 1;
+    text-decoration: none;
+  }
+  
+  .task-text.completed {
+    text-decoration: line-through;
+  }
+  
+  .task-date-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .task-date-container .MuiTypography-caption {
+    font-size: 12px;
+  }
+  
+  .avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+  
+  /* Task Input Section Styles */
+  .task-input {
+    margin-bottom: 16px;
+  }
+  
+  .textfield-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .add-task-button {
+    width: 100%;
+    display: block;
+    margin-top: 16px;
+    padding: 8px 16px;
+  }
+  
+  /* Menu Icon Button */
+  .icon-button-menu {
+    display: inline-block;
+    margin-left: 8px;
+  }
+  
+  /* Button styles */
+  .add-task-button,
+  .save-task-button {
+    width: 100%;
+  }
+  
+  .cancel-button {
+    color: red;
+  }
+  

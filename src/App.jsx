@@ -15,8 +15,8 @@ import TemplateManagement from "./Settings/TemplateManagement";
 import Plan from "./Billing/Plan";
 import Usage from "./Billing/Usage";
 import TopBar from "./Component/TopBar";
-
 import LeadDetails from "./Leads/LeadDetails";
+// import LeadDetails from "./Inbox/Leads/LeadDetails";
 const App = () => {
   return (
     <Router>

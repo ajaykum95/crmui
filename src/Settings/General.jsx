@@ -1,9 +1,8 @@
 import React from "react";
-
 const General=()=>{
     return(
         <>
-        <h2>This is an General</h2>
+        <h2>This is a General</h2>
         </>
     )
 }

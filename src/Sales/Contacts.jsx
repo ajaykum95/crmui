@@ -1,9 +1,11 @@
 import React from "react";
+// import Address from "../About/Address";
 
 const Contacts=()=>{
     return(
         <>
-        <h2>This is an Contact</h2>
+        {/* <Address/> */}
+        {/* <h2>This is an Contact</h2> */}
         </>
     )
 }

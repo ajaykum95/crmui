@@ -1,0 +1,35 @@
+/* Box styling
+.custom-box {
+    background-color: var(--secondary-color);
+    padding: var(--spacing-unit);
+}
+
+/* Grid container */
+.custom-grid {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-unit);
+}
+
+/* Typography */
+.custom-field-name {
+    font-weight: bold;
+    font-size: var(--font-size-base);  /* No need for !important */
+}
+
+.custom-field-value {
+    font-size: var(--font-size-base);  /* No need for !important */
+}
+
+/* Avatar */
+.custom-avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+} 
