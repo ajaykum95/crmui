@@ -8,8 +8,6 @@ import {
   FormControl,
   Slider,
   Typography,
-  Avatar,
-  Paper,
   Box,
 } from "@mui/material";
 import { CloudUpload } from "@mui/icons-material";
@@ -19,7 +17,7 @@ export default function EditForm() {
   const [confidence, setConfidence] = useState(50);
 
   return (
-    <Paper elevation={3} sx={{ p: 3, maxWidth: 400, borderRadius: 2 }}>
+    <Box sx={{ borderRadius: 2, p: 2 }}>
       {/* Amount and Frequency */}
       <Box sx={{ display: "flex", gap: 2 }}>
         <TextField
@@ -51,7 +49,7 @@ export default function EditForm() {
       </FormControl>
 
       {/* Estimated Close and Confidence */}
-      <Box sx={{  mt: 2 }}>
+      <Box sx={{ mt: 2 }}>
         <TextField
           size="small"
           label="Estimated Close"
@@ -61,32 +59,38 @@ export default function EditForm() {
           InputLabelProps={{ shrink: true }}
           fullWidth
         />
-          <Typography sx={{mt:2,ml:1,fontWeight:"bold"}}>Confidence:  {confidence }% </Typography>
-        <Box sx={{ mt:2 , border:"1px solid #ddd" ,p:1 ,borderRadius:1,height:"40px"}}
-        size="small"
+        <Box sx={{display:"flex" ,justifyContent:"space-between",mt:2}}>
+        <Typography sx={{  fontWeight: "bold" }}>
+          Confidence 
+        </Typography>
+        <Typography>{confidence}%</Typography>
+        </Box>
+        <Box
+          sx={{
+            mt: 1,
+            border: "1px solid #ddd",
+            p: 1,
+            borderRadius: 1,
+            height: "40px",
+          }}
+          size="small"
         >
           <Slider
-        
             size="small"
             value={confidence}
             onChange={(e, value) => setConfidence(value)}
             max={100}
-            step={1}>            <Typography>{confidence }%</Typography>
-             </Slider>
+            step={1}
+          />
         </Box>
       </Box>
 
       {/* Assigned To */}
       <FormControl fullWidth sx={{ mt: 2 }} size="small">
         <InputLabel>Assigned to</InputLabel>
-        <Select size="small" label="Assigned To" >
-          <MenuItem value="1">
-            {/* <Avatar >AK</Avatar> Ajay Kumar */}Akash
-          </MenuItem>
-          <MenuItem value="2">
-            {/* <Avatar >AK</Avatar> Akash Kumar */}Ajay
-          </MenuItem>
-
+        <Select size="small" label="Assigned To">
+          <MenuItem value="1">Akash</MenuItem>
+          <MenuItem value="2">Ajay</MenuItem>
         </Select>
       </FormControl>
 
@@ -113,11 +117,11 @@ export default function EditForm() {
       {/* Attachments */}
       <Box
         sx={{
-          border: "2px dashed #ccc",
           p: 2,
           borderRadius: 2,
           textAlign: "center",
           mt: 2,
+          border: "1px dashed #ccc", // Optional dashed border for better indication
         }}
       >
         <Button variant="outlined" component="label" startIcon={<CloudUpload />} size="small">
@@ -125,7 +129,7 @@ export default function EditForm() {
           <input type="file" hidden />
         </Button>
       </Box>
-    </Paper>
+    </Box>
   );
 }
 

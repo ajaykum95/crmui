@@ -285,7 +285,7 @@ const TaskData = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, mt: "-20px", p: 2 }}>
+    <Box sx={{ maxWidth: 400,  p: 2 }}>
       {tasks.length === 0 && !showInput ? (
         <Box sx={{ textAlign: "center" }}>
           <Typography variant="body2">
@@ -357,8 +357,8 @@ const TaskData = () => {
           ))}
 
           {showInput ? (
-            <Box sx={{ mb: 2 }}>
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 1, mb: 1 }}>
+            <Box>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 1, mb: 1}}>
                 <TextField
                   label="Task Description"
                   variant="outlined"
@@ -386,17 +386,18 @@ const TaskData = () => {
                   onChange={(e) => setNewName(e.target.value)}
                 />
               </Box>
-              <Box sx={{ display: "flex", gap: 1 }}>
+              <Box sx={{ display: "flex", gap: 1 ,justifyContent:"space-between"}}>
                 <Button
                   variant="contained"
                   onClick={handleAddTask}
-                  sx={{ flex: 1 }}
+                  
                 >
-                  Save Task
+                  Save 
                 </Button>
-                <IconButton onClick={() => setShowInput(false)}>
+                <Button onClick={() => setShowInput(false)} color="error">Cancel</Button>
+                {/* <IconButton onClick={() => setShowInput(false)}>
                   <CancelIcon color="error" />
-                </IconButton>
+                </IconButton> */}
               </Box>
             </Box>
           ) : (

@@ -148,9 +148,9 @@ const Design = () => {
   return (
     <div>
       {!isEditFormOpen ? (
-        <Box sx={{  }}>
+        <Box >
           <Box>
-            <Box display="flex" alignItems="center" justifyContent="space-between">
+            <Box display="flex" alignItems="center" justifyContent="space-between" >
               <Box display="flex" alignItems="center">
                 <Avatar sx={{ bgcolor: "#FFCDD2", color: "#D32F2F", fontSize: 14, width: 32, height: 32, mr: 1 }}>
                   AK

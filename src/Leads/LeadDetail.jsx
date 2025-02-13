@@ -28,6 +28,8 @@ import NoteBox from "../Thread/NoteBox";
 import EmailBox from "../Thread/EmailBox";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleNotes, toggleCall, toggleEmail, toggleSms } from "../Store/VisibilitySlice";
+import Email from "../Thread/Email";
+import LeadNote from "../Thread/LeadNote";
 
 const LeadDetail = () => {
     const dispatch = useDispatch();
@@ -177,9 +179,14 @@ const LeadDetail = () => {
                   <StatusChanged />
                 </Box>
                 <Box>
+                  <Email/>
+                </Box>
+                <Box>
                   <SMSCard />
                 </Box>
-
+                  <Box>
+                    <LeadNote/>
+                  </Box>
                 <Box>
                   <CallLog />
                 </Box>

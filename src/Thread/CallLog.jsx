@@ -5,6 +5,7 @@ import { Box, Card, IconButton, Typography, Avatar, CardContent, Divider, Menu, 
 import { PiClock } from "react-icons/pi";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { FaRegComment, FaTrash } from "react-icons/fa6";
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 
 const CallLog = () => {
   const [hover, setHover] = useState(false);
@@ -19,14 +20,13 @@ const CallLog = () => {
   };
 
   return (
-    <Box>
-      <Card sx={{ padding: 1, mt: 2 }} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-        <Box sx={{ display: "flex", alignItems: "center", gap: "4px", m: 1 }}>
-          <Avatar sx={{ bgcolor: "primary.main" }}>
-            <IoCallOutline />
-          </Avatar>
-
-          <Typography variant="body1" sx={{ fontWeight: "bold"}}>
+            <Box sx={{ display: "flex", mt: 1, backgroundColor: "#f5f5f5" }}>
+                <Box sx={{ pt: 2, pl: 1 }}>
+        <LocalPhoneOutlinedIcon />
+    </Box>    
+      <Card sx={{width:"100%",flex:8,ml:4, padding: 1, m: 1 }} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: "4px" }}>
+          <Typography  sx={{ fontWeight: "bold"}}>
             Call from Sales Team
           </Typography>
 
