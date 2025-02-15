@@ -37,7 +37,7 @@ const EmailBox = () => {
 
   return (
     <Box sx={{ display: "flex", mt: 1, backgroundColor: "#f5f5f5" }}>
-      <Box sx={{ pt: 2, pl: 1 }}>
+      <Box sx={{ pt: 3, pl: 1 }}>
         <SpeakerNotesOutlinedIcon />
       </Box>
 
@@ -45,13 +45,13 @@ const EmailBox = () => {
         <Card sx={{ p: 2, boxShadow: 3 }}>
           {/* Header */}
           <Box sx={{display:"flex",justifyContent:"space-between"}}>
-          <Typography variant="subtitle1" >(no subject)
+          <Typography sx={{fontSize:"var(--font-size-base)",fontWeight:"bold"}} >(no subject)
                         </Typography>
                         <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
                             <IconButton>
                                 <MoreHorizIcon />
                             </IconButton>
-                            <Avatar sx={{ width: "34px", height: "34px", fontSize: "14px" }}>AK</Avatar>
+        <Avatar sx={{ bgcolor: "red.300", width: 24, height: 24, fontSize: "var(--font-size-avatar)" }}> AK</Avatar>
 
           </Box>
           </Box>

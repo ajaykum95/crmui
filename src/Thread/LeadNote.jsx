@@ -34,32 +34,32 @@ const LeadNote = () => {
     return (
         <>
             <Box sx={{ display: "flex", mt: 1, backgroundColor: "#f5f5f5" }}>
-                <Box sx={{ pt: 2, pl: 1 }}>
+                <Box sx={{ pt: 3, pl: 1 }}>
                     <SpeakerNotesOutlinedIcon />
                 </Box>
                 <Card sx={{ width: "100%", flex: 8, ml: 4, m: 1, bgcolor: "white" }}>
                     <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 1 }}>
-                        <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                        <Typography sx={{ fontWeight: "bold",fontSize:"var(--font-size-base)" }}>
                             Ajay Kumar Created a note
                         </Typography>
                         <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
                             <IconButton onClick={handleClick}>
                                 <MoreHorizIcon />
                             </IconButton>
-                            <Avatar sx={{ width: "34px", height: "34px", fontSize: "14px" }}>AK</Avatar>
+        <Avatar sx={{ bgcolor: "red.300", width: 24, height: 24, fontSize: "var(--font-size-avatar)" }}> AK</Avatar>
                             <Typography>Now</Typography>
                         </Box>
                     </Box>
                     <Divider />
                     <CardContent>
                         <Box>
-                            <Typography component="span" sx={{ backgroundColor: "lightBlue", display: "inline-block", px: 0.5 }}>
+                            <Typography component="span" sx={{ backgroundColor: "lightBlue",fontSize:"var(--font-size-base)"}} >
                                 Phone menu and lead Call Routing
                             </Typography>
-                            <Typography>
+                            <Typography sx={{fontSize:"var(--font-size-base)"}}>
                                 Check out our Phone Menu/IVR functionality. You can now configure and route your incoming calls...
                             </Typography>
-                            <Typography color="primary" textAlign="center">
+                            <Typography color="primary" textAlign="center" variant="body2">
                                 Show More
                             </Typography>
                         </Box>

@@ -1,10 +1,11 @@
 import React from "react";
-import Home from "../Leads/Home";
+import ManageLeads from "../Leads/ManageLeads";
 const Leads=()=>{
     return(
         <>
-        <Home/>
+        <ManageLeads/>
         </>
     )
 }
 export default Leads;
+

@@ -15,8 +15,8 @@ import TemplateManagement from "./Settings/TemplateManagement";
 import Plan from "./Billing/Plan";
 import Usage from "./Billing/Usage";
 import TopBar from "./Component/TopBar";
-import LeadDetails from "./Leads/LeadDetails";
-// import LeadDetails from "./Inbox/Leads/LeadDetails";
+// import LeadDetails from "./Leads/LeadDetails";
+import Company from "./Leads/Company";
 const App = () => {
   return (
     <Router>
@@ -26,7 +26,7 @@ const App = () => {
             <Route path="/" element={<Dashboard />} />
             <Route path="/inbox" element={<Inbox />} />
             <Route path="/Opportunities" element={<Opportunities />} />
-            <Route path="/Leads" element={<Leads />} />
+            <Route path="/Leads/" element={<Leads />} />
             <Route path="/Contacts" element={<Contacts />} />
             <Route path="/Reports" element={<Reports />} />
             <Route path="/General" element={<General />} />
@@ -36,7 +36,8 @@ const App = () => {
             <Route path="/TemplateManagement" element={<TemplateManagement />} />
             <Route path="/Plan" element={<Plan />} />
             <Route path="/Usage" element={<Usage />} />
-            <Route path="/lead/:id" element={<LeadDetails />} />
+            {/* <Route path="/lead/:id" element={<LeadDetails />} /> */}
+            <Route path="/lead/:id" element={<Company/>} />
 
            
           </Routes>

@@ -21,12 +21,12 @@ const CallLog = () => {
 
   return (
             <Box sx={{ display: "flex", mt: 1, backgroundColor: "#f5f5f5" }}>
-                <Box sx={{ pt: 2, pl: 1 }}>
+                <Box sx={{ pt: 3, pl: 1 }}>
         <LocalPhoneOutlinedIcon />
     </Box>    
       <Card sx={{width:"100%",flex:8,ml:4, padding: 1, m: 1 }} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <Box sx={{ display: "flex", alignItems: "center", gap: "4px" }}>
-          <Typography  sx={{ fontWeight: "bold"}}>
+          <Typography  sx={{fontSize:"var(--font-size-base)",fontWeight:"Bold"}}>
             Call from Sales Team
           </Typography>
 
@@ -36,7 +36,7 @@ const CallLog = () => {
           <IconButton aria-label="Call duration">
             <PiClock />
           </IconButton>
-          <Typography variant="body2" sx={{ fontSize: "0.875rem" }}>6m 23s</Typography>
+          <Typography variant="body2" sx={{fontSize:"var(--font-size-base)"}}>6m 23s</Typography>
 
           <Box sx={{ flexGrow: 1 }} />
 
@@ -50,19 +50,19 @@ const CallLog = () => {
             </IconButton>
           </Box>
 
-          <Avatar sx={{ width: 32, height: 32, ml: 2 }}>AK</Avatar>
+        <Avatar sx={{ bgcolor: "red.300", width: 24, height: 24, fontSize: "var(--font-size-avatar)" }}> AK</Avatar>
           <Typography variant="caption" sx={{ marginLeft: 1 }}>2d ago</Typography>
         </Box>
 
         <Divider />
-        <CardContent sx={{ ml: 3 }}>
-          <Typography>
+        <CardContent sx={{ ml: 0 }}>
+          <Typography sx={{pl:0}}>
             This is a call. You can make calls straight from your browser, use our mobile app, or download our Mac/Windows application. Calls can have AI transcriptions and summaries.
           </Typography>
-          <Divider sx={{ my: 1 }} />
+          {/* <Divider sx={{ my: 1 }} />
           <Typography>• Emily is exploring Close and has questions about finding new leads and following up on unresponsive leads.</Typography>
           <Typography>• Sam explains how to use smart views to automatically pull in new leads and leads who haven't responded.</Typography>
-          <Typography>• Sam recommends other useful Close features like call transcription, collaboration tools, and snippets.</Typography>
+          <Typography>• Sam recommends other useful Close features like call transcription, collaboration tools, and snippets.</Typography> */}
         </CardContent>
 
         {/* Popover Menu - Appears Below the MoreHorizIcon */}

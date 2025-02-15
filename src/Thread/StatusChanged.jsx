@@ -30,7 +30,7 @@ const StatusChanged = () => {
         <Typography
           variant="body2"
           fontWeight="bold"
-          sx={{ fontSize: "14px", whiteSpace: "nowrap" }}
+          sx={{ fontSize: "12px", whiteSpace: "nowrap" }}
         >
           Status changed from{" "}
         </Typography>
@@ -41,26 +41,17 @@ const StatusChanged = () => {
         <Typography
           variant="body2"
           fontWeight="bold"
-          sx={{ fontSize: "14px", marginX: "4px" }}
+          sx={{ fontSize: "10px", marginX: "4px" }}
         >
           →
         </Typography>
         <Chip
           label="CUSTOMER"
-          sx={{ fontSize: "12px", backgroundColor: "#4CAF50", color: "#fff" }}
+          sx={{ fontSize: "10px", backgroundColor: "#4CAF50", color: "#fff" }}
         />
       </Box>
       <Box display="flex" alignItems="center">
-        <Avatar
-          sx={{
-            width: 28,
-            height: 28,
-            fontSize: "12px",
-            backgroundColor: "#FF5722",
-          }}
-        >
-          AK
-        </Avatar>
+        <Avatar sx={{ bgcolor: "red.300", width: 24, height: 24, fontSize: "var(--font-size-avatar)" }}> AK</Avatar>
         <Typography
           variant="caption"
           sx={{ fontSize: "12px", marginLeft: "8px", color: "#757575" }}

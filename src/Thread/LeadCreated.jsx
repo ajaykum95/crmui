@@ -19,15 +19,13 @@ const LeadCreated = () => {
         <Avatar sx={{ bgcolor: "grey.300", width: 24, height: 24 }}>
           <SlScreenSmartphone size={16} />
         </Avatar>
-        <Typography variant="body2" sx={{fontSize:"var(--font-size-base)"}}>
+        <Typography  sx={{fontSize:"var(--font-size-small)",fontWeight:"bold"}}>
           Created manually
         </Typography>
       </Stack>
 
       <Stack direction="row" alignItems="center" spacing={1}>
-        <Avatar sx={{ bgcolor: "red.300", width: 24, height: 24, fontSize: "var(--font-size-avatar)" }}>
-          AK
-        </Avatar>
+        <Avatar sx={{ bgcolor: "red.300", width: 24, height: 24, fontSize: "var(--font-size-avatar)" }}> AK</Avatar>
         <Typography variant="caption" color="text.secondary">
           2d ago
         </Typography>

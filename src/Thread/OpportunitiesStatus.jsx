@@ -85,16 +85,7 @@ const OpportunityStatus = () => {
 
       {/* User Initials and Time */}
       <Box display="flex" alignItems="center" marginLeft="8px">
-        <Avatar
-          sx={{
-            width: "20px",
-            height: "20px",
-            fontSize: "10px",
-            backgroundColor: "#FF5722",
-          }}
-        >
-          AK
-        </Avatar>
+        <Avatar sx={{ bgcolor: "red.300", width: 24, height: 24, fontSize: "var(--font-size-avatar)" }}> AK</Avatar>
         <Typography variant="caption" sx={{ fontSize: "10px", marginLeft: "8px", color: "#757575" }}>
           1d ago
         </Typography>

@@ -59,7 +59,7 @@ const CallBox = () => {
                 </Box>
                 <Card sx={{ width: "100%", flex: 8, ml: 4, m: 1, bgcolor: "white" }}>
                     <Box sx={{ display: "flex", alignItems: "center", p: 1 }}>
-                        <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                        <Typography sx={{ fontWeight: "bold",fontSize:"var(--font-size-base)" }}>
                             Called Unknown Number                         
                         </Typography>
                         <IconButton aria-label="Call details">
@@ -74,7 +74,7 @@ const CallBox = () => {
                             <IconButton onClick={handleMenuOpen}>
                                 <MoreHorizIcon />
                             </IconButton>
-                            <Avatar sx={{ width: "34px", height: "34px", fontSize: "14px" }}>AK</Avatar>
+        <Avatar sx={{ bgcolor: "red.300", width: 24, height: 24, fontSize: "var(--font-size-avatar)" }}> AK</Avatar>
                             <Typography>Now</Typography>
                         </Box>
                     </Box>

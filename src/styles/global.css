@@ -6,7 +6,9 @@
 
     --font-size-base: 14px; 
     --font-size-avatar:12px;       
-    --font-size-heading: 14px;     
+    --font-size-heading: 14px; 
+    --font-size-small: 12px; 
+    
     --border-radius: 8px;          
     --spacing-unit: 8px;           
 }

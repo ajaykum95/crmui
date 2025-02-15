@@ -126,7 +126,7 @@ const Company = () => {
         </Box>
 
         {/* Buttons */}
-        <Box sx={{ display: "flex", gap: 2 }}>
+        <Box sx={{ display: "flex", gap: 2,ml:5 }}>
           <button style={buttonStyle} onClick={() => dispatch(toggleNotes())}>
             <MdOutlineSpeakerNotes size={18} /> Notes
           </button>
@@ -195,7 +195,7 @@ const Company = () => {
       </Box>
 
       {/* Scrollable Content (LeadDetail) */}
-      <Box >
+      <Box sx={{mt:6 }}>
         <LeadDetail />
       </Box>
     </Box>
@@ -203,3 +203,4 @@ const Company = () => {
 };
 
 export default Company;
+

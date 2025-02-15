@@ -28,12 +28,12 @@ const SMSCard = () => {
     <Card sx={{  p:1, mt: 2 ,width:"100%",m:1 }}>
       <Box display="flex" alignItems="center" justifyContent="space-between"  >
         <Box display="flex" alignItems="center" gap={1}>
-          <Typography variant="body1" fontWeight="bold">
+          <Typography  fontWeight="bold" sx={{fontSize:"var(--font-size-base)"}}>
             SMS with Ajay Kumar and Close Sales Team
           </Typography>
         </Box>
         <Box display="flex" alignItems="center" gap={1}>
-          <Avatar sx={{ width: 24, height: 24, fontSize: "12px", bgcolor: "red.300" }}>AK</Avatar>
+        <Avatar sx={{ bgcolor: "red.300", width: 24, height: 24, fontSize: "var(--font-size-avatar)" }}> AK</Avatar>
           <Typography variant="caption" color="text.secondary">
             1d ago
           </Typography>
@@ -42,10 +42,10 @@ const SMSCard = () => {
 
       <CardContent sx={{ backgroundColor: "#fff", borderRadius: 2 }}>
         <Box display="flex"  alignItems="center" sx={{gap:"10px",ml:0}}>
-          <Typography fontWeight="bold" color="text.primary">
+          <Typography fontWeight="bold" color="text.primary" sx={{fontSize:"var(--font-size-base)"}}>
             Close Sales Team
           </Typography>
-          <Typography  color="success.main">
+          <Typography   color="success.main" sx={{fontSize:"var(--font-size-base)"}}>
             6:39am
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
