@@ -1,8 +1,9 @@
 import React from "react";
+import ProfileHeader from "../Leads/ProfileHeader";
 const General=()=>{
     return(
         <>
-        <h2>This is a General</h2>
+    <ProfileHeader/>
         </>
     )
 }

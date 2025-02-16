@@ -31,7 +31,7 @@ import { toggleNotes, toggleCall, toggleEmail, toggleSms } from "../Store/Visibi
 import Email from "../Thread/Email";
 import LeadNote from "../Thread/LeadNote";
 
-const LeadDetail = () => {
+const LeadDetaill = () => {
     const dispatch = useDispatch();
     const showNotes = useSelector((state) => state.visibility.showNotes);
     const showEmail = useSelector((state) => state.visibility.showEmail);
@@ -42,7 +42,7 @@ const LeadDetail = () => {
   const [selectedRightTab, setSelectedRightTab] = useState(0);
 
   return (
-    <Box sx={{ display: "flex", marginLeft: "229px", mt: 9 }}>
+    <Box sx={{ display: "flex", marginLeft: "230px", mt: 9 }}>
       {/* minHeight: "100vh", */}
       <Box
         sx={{ flex: 4, overflowY: "auto", overflowX: "hidden", height: "80vh" }}
@@ -55,7 +55,7 @@ const LeadDetail = () => {
             sx={{
               position: "fixed",
               top: 0,
-              mt: 14,
+              mt: 19,
               width: "450px",
               backgroundColor: "white",
               zIndex: 100,
@@ -72,7 +72,7 @@ const LeadDetail = () => {
               <Tab label="Files" />
             </Tabs>
           </Box>
-          <Box sx={{ flex: 1, overflowY: "auto", padding: "41px 10px" }}>
+          <Box sx={{ flex: 1, overflowY: "auto", padding: "125px 10px" }}>
             {selectedLeftTab === 0 && (
               <div>
                 <Box>
@@ -123,7 +123,7 @@ const LeadDetail = () => {
             sx={{
               position: "fixed",
               top: 0,
-              mt: 14,
+              mt: 19,
               
               // width: "770px",
               width: "750px",
@@ -167,10 +167,24 @@ const LeadDetail = () => {
               </IconButton>
             </Box>
           </Box>
-          <Box sx={{ flex: 1, overflowY: "auto", padding: "41px 0px" }}>
+          <Box sx={{ flex: 1, overflowY: "auto", padding: "121px 0px" }}>
             {selectedRightTab === 0 && (
               <div>
+                                <Box>
+                 {showNotes && <NoteBox/>}
+                </Box>
                 <Box>
+                 {showEmail && <EmailBox/>}
+                </Box>
+                <Box>
+                  {showCall && <CallBox/>}
+                </Box>
+                <Box>
+                  {showSms && <NoteBox />} {/* Show NotesBox */}
+                </Box>
+
+                <Box>
+
                   <LeadCreated />
                 </Box>
                 <Box>
@@ -191,18 +205,6 @@ const LeadDetail = () => {
                 <Box>
                   <CallLog />
                 </Box>
-                <Box>
-                 {showNotes && <NoteBox/>}
-                </Box>
-                <Box>
-                 {showEmail && <EmailBox/>}
-                </Box>
-                <Box>
-                  {showCall && <CallBox/>}
-                </Box>
-                <Box>
-                  {showSms && <NoteBox />} {/* Show NotesBox */}
-                </Box>
 
               </div>
             )}
@@ -222,5 +224,5 @@ const LeadDetail = () => {
   );
 };
 
-export default LeadDetail;
+export default LeadDetaill;
 
