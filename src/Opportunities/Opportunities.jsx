@@ -65,7 +65,7 @@ const Opportunities = () => {
   };
 
   return (
-    <Card sx={{ width: "100%", mt: "var(--spacing-unit)", bgcolor: "var(--background-color)", p: "var(--spacing-unit)" }}>
+    <Card sx={{ width: "100%", mt: 2, bgcolor: "var(--background-color)", p: "var(--spacing-unit)" }}>
       {/* Header Section */}
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", px: "var(--spacing-unit)", height: "30px" }}>
         <Box onClick={handleClick}>

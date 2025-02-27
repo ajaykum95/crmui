@@ -1,0 +1,40 @@
+/* CustomCard.css */
+
+.card {
+  width: 100%;
+  margin-top: 2rem;
+  background-color: var(--background-color); /* Global background color */
+  padding: var(--spacing-unit); /* Global padding */
+  border-radius: var(--border-radius); /* Global border radius */
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--spacing-unit);
+  padding-right: var(--spacing-unit);
+  height: 30px;
+}
+
+.card-title {
+  flex-grow: 1;
+  margin-left: var(--spacing-unit);
+  font-size: var(--font-size-heading); /* Global font size */
+}
+
+.add-field {
+  padding: var(--spacing-unit);
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field {
+  margin-right: 3rem;
+}
+
+.card-content {
+  background-color: white;
+  border-radius: var(--border-radius); /* Global border radius */
+  padding: var(--spacing-unit); /* Global padding */
+}

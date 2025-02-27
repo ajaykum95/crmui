@@ -322,21 +322,29 @@ const ProfileHeader = () => {
           </Box>
         </Box>
 
-        <Box sx={{ display: "flex", gap: 1 }}>
-          <Button  onClick={() => dispatch(toggleNotes())}  variant="outlined" startIcon={<ChatBubbleOutlineIcon />} sx={{ textTransform: "none", borderRadius: "16px" }}>
+        <Box sx={{ display: "flex", gap: 1,color:"#2E2E2E" }}>
+          <Button  onClick={() => dispatch(toggleNotes())}  variant="outlined" startIcon={<ChatBubbleOutlineIcon />} sx={{ textTransform: "none", borderRadius: "16px" , borderColor: "#ddd",color:"#2E2E2E"
+}}>
             Note
           </Button>
-          <Button   onClick={() => dispatch(toggleEmail())}  variant="outlined" startIcon={<EmailIcon />} sx={{ textTransform: "none", borderRadius: "16px" }}>
+          <Button   onClick={() => dispatch(toggleEmail())}  variant="outlined" startIcon={<EmailIcon />} sx={{ textTransform: "none", borderRadius: "16px"
+            ,  borderColor: "#ddd",color:"#2E2E2E"
+
+           }}>
             Email
           </Button>
-          <Button   onClick={() => dispatch(toggleCall())} variant="outlined" startIcon={<SmsIcon />} sx={{ textTransform: "none", borderRadius: "16px" }}>
+          <Button   onClick={() => dispatch(toggleCall())} variant="outlined" startIcon={<SmsIcon />} sx={{ textTransform: "none", borderRadius: "16px",
+                            borderColor: "#ddd",color:"#2E2E2E"
+
+           }}>
             SMS
           </Button>
           <Select
             value={callOption}
             onChange={(e) => setCallOption(e.target.value)}
             displayEmpty
-            sx={{ textTransform: "none", borderRadius: "16px", height: "36px" }}
+            sx={{ textTransform: "none", borderRadius: "16px", height: "36px",                borderColor: "#ddd",
+            }}
           >
             <MenuItem value="" disabled>
               <CallIcon sx={{ fontSize: 18, mr: 1 }} /> Call

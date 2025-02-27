@@ -4,6 +4,14 @@ import { SlScreenSmartphone } from "react-icons/sl";
 
 const LeadCreated = () => {
   return (
+    <>
+            <Box sx={{ display: "flex", mt: 1, backgroundColor: "#f5f5f5"}}>
+              <Box sx={{pt:1,pl:2}}>
+              <Avatar sx={{ bgcolor: "grey.300", width: 24, height: 24,  }}>
+          <SlScreenSmartphone size={16} />
+        </Avatar>
+              </Box>
+
     <Box
       sx={{
         display: "flex",
@@ -16,9 +24,9 @@ const LeadCreated = () => {
       }}
     >
       <Stack direction="row" alignItems="center" spacing={1}>
-        <Avatar sx={{ bgcolor: "grey.300", width: 24, height: 24 }}>
+        {/* <Avatar sx={{ bgcolor: "grey.300", width: 24, height: 24 }}>
           <SlScreenSmartphone size={16} />
-        </Avatar>
+        </Avatar> */}
         <Typography  sx={{fontSize:"var(--font-size-small)",fontWeight:"bold"}}>
           Created manually
         </Typography>
@@ -31,6 +39,10 @@ const LeadCreated = () => {
         </Typography>
       </Stack>
     </Box>
+    </Box>
+
+    </>
+
   );
 };
 

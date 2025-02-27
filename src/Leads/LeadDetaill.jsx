@@ -42,10 +42,10 @@ const LeadDetaill = () => {
   const [selectedRightTab, setSelectedRightTab] = useState(0);
 
   return (
-    <Box sx={{ display: "flex", marginLeft: "230px", mt: 9 }}>
+    <Box sx={{ display: "flex", marginLeft: "230px", mt: 9}}>
       {/* minHeight: "100vh", */}
       <Box
-        sx={{ flex: 4, overflowY: "auto", overflowX: "hidden", height: "80vh" }}
+        sx={{ flex: 4, overflowY: "auto", overflowX: "hidden", height: "80vh", }}
       >
         <Paper
           elevation={3}
@@ -140,6 +140,7 @@ const LeadDetaill = () => {
             <Tabs
               value={selectedRightTab}
               onChange={(e, val) => setSelectedRightTab(val)}
+              
             >
               <Tab label="All" sx={{ fontSize: "12px" }} />
               <Tab label="Important" sx={{ fontSize: "12px" }} />
